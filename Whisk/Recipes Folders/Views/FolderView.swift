@@ -8,7 +8,12 @@
 import SwiftUI
 
 struct FolderView: View {
+//    @State var index:Int
+
     @State var folder: Folder
+    @ObservedObject var vm:FolderViewModel //different instance
+//    @State var index:Int
+    
 //    let index = folder.firstIndex(of: folder)!
     var body: some View {
         VStack(alignment: .leading, spacing:2) {
@@ -16,20 +21,38 @@ struct FolderView: View {
             
             HStack {
                 Spacer()
-                Button {
-                    
+                Menu {
+                    Button("Rename", action: {})
+                    Button("Delete", action: {
+//                        folders.remove(atOffsets: folder.index-1)
+                        vm.removeFolder(folder: folder)
+                        //Sol1
+//                        vm.folders.remove(atOffsets: IndexSet(integer: folder.index - 1))
+                        
+                        
+                        
+                    })
+                        
                 } label: {
                     Image("dots2")
+                        .frame(width: 20, height: 20)
                 }
+//                .frame(width: 20, height: 20)
+                .overlay(
+                    Image("dots2")
+                        .frame(width: 20, height: 20)
+                )
+//                .background(.red)
                
             }
-            .padding(.horizontal)
-            .padding(.top, 12)
+            .padding(.horizontal,5)
+            .padding(.top, 10)
+//            .background(.red)
             
             HStack(spacing: 12) {
-                
+                Text("\(folder.index)")
 
-                StrokeText(text: "\(folder.index)", width: 0.5, color: Color("purple"))
+                StrokeText(text: "\( folder.index)", width: 0.5, color: Color("purple"))
                            .foregroundColor(Color("yellow"))
                            .font(.system(size: 18, weight: .bold))
                 
@@ -42,13 +65,14 @@ struct FolderView: View {
             }
             .padding(.horizontal)
             .padding(.bottom, 4)
-            .offset(y: -8)
-            
+            .offset(y: -10)
+           
             Rectangle()
                 .fill(Color("lightgrey").opacity(0.5))
                 .frame(width: 59,height: 1)
                 .padding(.horizontal)
                 .padding(.bottom, 2)
+                .offset(y: -3)
             
 //            Divider()
 //                .background(Color("lightgrey"))
@@ -63,6 +87,7 @@ struct FolderView: View {
                 .foregroundColor(Color("lightgrey"))
                 .padding(.horizontal)
                 .padding(.bottom, 10)
+                .offset(y: -3)
             
          
                 
@@ -78,9 +103,9 @@ struct FolderView: View {
         )
     }
 }
-
-struct FolderView_Previews: PreviewProvider {
-    static var previews: some View {
-        FolderView(folder: Folder(name: "Lunch", index: 1))
-    }
-}
+//
+//struct FolderView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        FolderView(folder: Folder(name: "Lunch", index: 1), index: <#Int#>, vm: FolderViewModel())
+//    }
+//}

@@ -30,7 +30,6 @@ struct RecipesScreen: View {
     
     
     var body: some View {
-        NavigationView {
             
             ScrollView {
                
@@ -97,6 +96,7 @@ struct RecipesScreen: View {
                     ForEach(0..<recipes.count, id:\.self) { num in
 
                         NavigationLink {
+                            RecipeDetailScreen()
                             
                         } label: {
                             RecipeView(recipe: recipes[num])
@@ -108,7 +108,7 @@ struct RecipesScreen: View {
                 .padding(.horizontal, 32)
                 .padding(.top, 30)
             }
-        }
+
     }
 }
 

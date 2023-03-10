@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct Folder {
-    let name: String
-    let index: Int
-    let numOfRecipe: Int = 2
-}
 
 struct FoldersScreen: View {
+    
+    @StateObject  var vm = FolderViewModel() //habed :)
+    @State private var presentAlert = false
+    @State private var folderName: String = ""
+//    @State private var password: String = ""
     
     
     
@@ -31,18 +31,14 @@ struct FoldersScreen: View {
                         UINavigationBar.appearance().compactAppearance = navigationBarAppearance
                         UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
                     
-//                    let tabBarApperance = UITabBarAppearance()
-//                    tabBarApperance.configureWithOpaqueBackground()
-//                    tabBarApperance.backgroundColor = UIColor.blue
-//                    UITabBar.appearance().scrollEdgeAppearance = tabBarApperance
-//                    UITabBar.appearance().standardAppearance = tabBarApperance
+
                 }
     }
     
     let columns = [
         GridItem(.adaptive(minimum: 150))
     ]
-    @State var folders = [Folder(name: "Lunch", index: 1), Folder(name: "Breakfast", index: 2), Folder(name: "Dinner", index: 3), Folder(name: "Dinner", index: 4), Folder(name: "Dinner", index: 5), Folder(name: "Dinner", index: 6), Folder(name: "Dinner", index: 7), Folder(name: "Dinner", index: 8), Folder(name: "Dinner", index: 9), Folder(name: "Dinner", index: 10), Folder(name: "Dinner", index: 11),Folder(name: "Dinner", index: 12), Folder(name: "Dinner", index: 13),Folder(name: "Dinner", index: 14), Folder(name: "Dinner", index: 15)]
+//    @State var folders = [Folder(name: "Lunch", index: 1), Folder(name: "Breakfast", index: 2), Folder(name: "Dinner", index: 3), Folder(name: "Sushi", index: 4)]
 
     
     var body: some View {
@@ -50,16 +46,33 @@ struct FoldersScreen: View {
         
                 ScrollView {
                     LazyVGrid (columns: columns, spacing: 27) {
-                        ForEach(0..<folders.count, id:\.self) { num in
-//                            let index = folders.firstIndex(of: folder)!
+//                        ForEach(0..<vm.folders.count,id:\.self) { num in
+////                            let index = folders.firstIndex(of: folder)!
+//                            NavigationLink {
+//                                RecipesScreen()
+//                            } label: {
+//                                FolderView(folder: vm.folders[num],vm: vm)
+//                              //  FolderView(vm: vm, index: num)
+//
+//                               // FolderView(folder: vm.folders[num])
+//
+//                            }
+//
+//                        }
+                        
+                        
+                        ForEach(vm.folders,id: \.name){ folder in
                             NavigationLink {
                                 RecipesScreen()
                             } label: {
-                                FolderView(folder: folders[num])
+                                FolderView(folder: folder,vm: vm)
+                              //  FolderView(vm: vm, index: num)
+
+                               // FolderView(folder: vm.folders[num])
 
                             }
-                            
                         }
+                        
                     }
                     .padding(.horizontal, 20)
                     .padding(.top, 30)
@@ -77,19 +90,40 @@ struct FoldersScreen: View {
                                                
                         HStack {
                         
-                                Button {
+                                Menu {
+                                    Button("Select Folders", action: {})
+                                    Button("Cancel", role: .cancel, action: {})
+                                        
                 
                                 } label: {
-                                    Image("dotss")
+                                    Image(systemName: "ellipsis.circle")
+                                        .foregroundColor(Color("navy"))
                                 }
                                 .frame(width: 25, height: 25)
 
                                 Button {
-                                    
+                                    presentAlert = true
                                 } label: {
-                                    Image("pluss")
+                                    Image(systemName: "plus.circle")
+                                        .foregroundColor(Color("navy"))
                                 }
                                 .frame(width: 25, height: 25)
+                                .alert("New Folder", isPresented: $presentAlert, actions: {
+                                            TextField("Folder", text: $folderName)
+
+                                            Button("Create", action: {
+                                                withAnimation{
+                                                    vm.folders.append(Folder(name: folderName, index: vm.folders.count+1))
+                                                }
+                                                
+                                                folderName = ""
+                                            })
+                                            Button("Cancel", role: .cancel, action: {
+                                                folderName = ""
+                                            })
+                                        }, message: {
+                                            Text("Enter a name for this folder.")
+                                        })
             
                             }
                             .padding(25)

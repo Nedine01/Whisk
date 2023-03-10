@@ -9,10 +9,12 @@ import SwiftUI
 
 struct RecipeDetailScreen: View {
     
+    @Environment(\.presentationMode) var presentationMode
+    
     @State private var selection = "Scale"
     let scales = ["1", "2", "3", "4", "5"]
     let ingredients = ["1 1/2 cups flour","3 1/2 baking powder","1 Tbsp white sugar","1/4 tsp salt","1 1/4 cups milk", "3 Tbsp butter, melted","1 egg"]
-    
+    @State private var show: Bool = false
     var body: some View {
         VStack (alignment:.leading){
             
@@ -25,17 +27,19 @@ struct RecipeDetailScreen: View {
                 .overlay(
                     HStack {
                         Button {
-                            
+                            presentationMode.wrappedValue.dismiss()
+
                         } label: {
                             Image("back")
                         }
-                        
+                        .padding(.top, 30)
+
                         Spacer()
-                        
-                      
+
+
                     }
                     .padding(),alignment: .top
-                                
+
                 )
             
         
@@ -58,22 +62,19 @@ struct RecipeDetailScreen: View {
                 //scale button
                 HStack {
                     Button {
-                        Picker("", selection: $selection) {
-                                ForEach(scales, id: \.self) {
-                                    Text($0)
-                                }
-                            }
-
+                        withAnimation{
+                            show.toggle()
+                        }
+                       
                     } label: {
                         
                         HStack {
                             
-                            Text("Scale")
+                            Text("Scale and Unit")
                                 .font(.system(size: 10))
                                 .fontWeight(.medium)
                                 .foregroundColor(Color("navy"))
                             
-                            Image("arrowS")
                             
                         }
                         
@@ -81,7 +82,8 @@ struct RecipeDetailScreen: View {
                     
                        
                 }
-                .frame(width: 65, height: 22)
+                .frame(height: 22)
+                .padding(.horizontal,10)
                 .background(Color("purple").opacity(0.08))
                 .clipShape(Capsule())
                 .overlay(
@@ -89,39 +91,7 @@ struct RecipeDetailScreen: View {
                         .stroke(Color("purple").opacity(0.08))
                 )
                 
-                //unit button
-                HStack {
-                    Button {
-                        Picker("", selection: $selection) {
-                                ForEach(scales, id: \.self) {
-                                    Text($0)
-                                }
-                            }
-
-                    } label: {
-                        
-                        HStack {
-                            
-                            Text("Units")
-                                .font(.system(size: 10))
-                                .fontWeight(.medium)
-                                .foregroundColor(Color("navy"))
-                            
-                            Image("arrowS")
-                            
-                        }
-                        
-                    }
-                    
-                       
-                }
-                .frame(width: 65, height: 22)
-                .background(Color("purple").opacity(0.08))
-                .clipShape(Capsule())
-                .overlay(
-                    Capsule()
-                        .stroke(Color("purple").opacity(0.08))
-                )
+                
                 
                 
                 HStack {
@@ -157,48 +127,62 @@ struct RecipeDetailScreen: View {
                 }
                 .padding(.bottom,15)
                 
-                ScrollView{
+                ZStack(alignment: .bottom){
                     
-                    ForEach(ingredients, id: \.self) { ingredient in
-                        VStack {
-                            HStack {
-                                Button {
+                    ScrollView{
+                        
+                        ForEach(ingredients, id: \.self) { ingredient in
+                            VStack {
+                                HStack {
+                                    Button {
+                                        
+                                    } label: {
+                                        Image("plusbutton")
+                                    }
+                                    .padding(.trailing,5)
                                     
-                                } label: {
-                                    Image("plusbutton")
-                                }
-                                .padding(.trailing,5)
-                                
-                                
-                                
-                                Button {
                                     
-                                } label: {
-                                    Text(ingredient)
-                                        .foregroundColor(Color("navy"))
-                                    Spacer()
-                                    Image("ingarrow")
-                                  
+                                    
+                                    Button {
+                                        
+                                    } label: {
+                                        Text(ingredient)
+                                            .foregroundColor(Color("navy"))
+                                        Spacer()
+                                        Image("ingarrow")
+                                        
+                                    }
                                 }
+                                Divider()
                             }
-                            Divider()
+                            
                         }
+                    }
+                    .frame(height: 268)
+                    
+                    if show {
+                       
+                        ScalingView(show: $show)
+                            .transition(.move(edge: .bottom))
                         
                     }
+                    
                 }
-                .frame(height: 268)
                 
-                
-                Button {
+               
                     
-                } label: {
+                    Button {
+                        
+                    } label: {
+                        
+                        Image("startcooking")
+                        
+                            .padding(.vertical,10)
+                            .padding(.bottom,45)
+                            .offset(x:5)
+                    }
                     
-                    Image("startcooking")
-                    
-                        .padding(.vertical,10)
-                        .padding(.bottom,45)
-                        .offset(x:5)
-                }
+                   
 
               
             }
@@ -206,6 +190,8 @@ struct RecipeDetailScreen: View {
             .padding(.top,10)
 
         }
+        .navigationBarBackButtonHidden(true)
+
     }
 }
 

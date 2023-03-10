@@ -11,11 +11,15 @@
 		CD5DC9D529941E0D00B0FB6E /* RecipesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DC9D429941E0D00B0FB6E /* RecipesScreen.swift */; };
 		CD8642F1299955EF00F869E3 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8642F0299955EF00F869E3 /* UIApplication.swift */; };
 		CD8642F3299B9A8E00F869E3 /* RecipeDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8642F2299B9A8E00F869E3 /* RecipeDetailScreen.swift */; };
+		CD8642F529AA7BD200F869E3 /* ScalingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8642F429AA7BD100F869E3 /* ScalingView.swift */; };
 		CD87B56F299171290064AAE6 /* WhiskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD87B56E299171290064AAE6 /* WhiskApp.swift */; };
 		CD87B571299171290064AAE6 /* FoldersScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD87B570299171290064AAE6 /* FoldersScreen.swift */; };
 		CD87B5732991712B0064AAE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD87B5722991712B0064AAE6 /* Assets.xcassets */; };
 		CD87B5762991712B0064AAE6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD87B5752991712B0064AAE6 /* Preview Assets.xcassets */; };
 		CD87B57D2991728C0064AAE6 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD87B57C2991728C0064AAE6 /* Colors.swift */; };
+		CD90492C29B650100051CCA2 /* ShoppingListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD90492B29B650100051CCA2 /* ShoppingListScreen.swift */; };
+		CD90492E29B9D5A90051CCA2 /* FolderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD90492D29B9D5A90051CCA2 /* FolderViewModel.swift */; };
+		CD90493029BB3B640051CCA2 /* FolderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD90492F29BB3B640051CCA2 /* FolderModel.swift */; };
 		CDB3543C2996D4F2008CB2BE /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3543B2996D4F2008CB2BE /* RecipeView.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,12 +28,16 @@
 		CD5DC9D429941E0D00B0FB6E /* RecipesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesScreen.swift; sourceTree = "<group>"; };
 		CD8642F0299955EF00F869E3 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		CD8642F2299B9A8E00F869E3 /* RecipeDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailScreen.swift; sourceTree = "<group>"; };
+		CD8642F429AA7BD100F869E3 /* ScalingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalingView.swift; sourceTree = "<group>"; };
 		CD87B56B299171290064AAE6 /* Whisk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whisk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD87B56E299171290064AAE6 /* WhiskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiskApp.swift; sourceTree = "<group>"; };
 		CD87B570299171290064AAE6 /* FoldersScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldersScreen.swift; sourceTree = "<group>"; };
 		CD87B5722991712B0064AAE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD87B5752991712B0064AAE6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CD87B57C2991728C0064AAE6 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		CD90492B29B650100051CCA2 /* ShoppingListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShoppingListScreen.swift; path = "Recipes Folders/ShoppingListScreen.swift"; sourceTree = "<group>"; };
+		CD90492D29B9D5A90051CCA2 /* FolderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderViewModel.swift; sourceTree = "<group>"; };
+		CD90492F29BB3B640051CCA2 /* FolderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderModel.swift; sourceTree = "<group>"; };
 		CDB3543B2996D4F2008CB2BE /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,7 +72,9 @@
 			isa = PBXGroup;
 			children = (
 				CD87B56E299171290064AAE6 /* WhiskApp.swift */,
+				CD90492B29B650100051CCA2 /* ShoppingListScreen.swift */,
 				CD8642F2299B9A8E00F869E3 /* RecipeDetailScreen.swift */,
+				CD8642F429AA7BD100F869E3 /* ScalingView.swift */,
 				CDB3543A2996D4DA008CB2BE /* Recipes */,
 				CD87B57C2991728C0064AAE6 /* Colors.swift */,
 				CD8642F0299955EF00F869E3 /* UIApplication.swift */,
@@ -83,11 +93,45 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		CDB354392996D42F008CB2BE /* Recipes Folders */ = {
+		CD90493129BB53000051CCA2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD5DC9D22993D29700B0FB6E /* FolderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CD90493229BB53120051CCA2 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
 				CD87B570299171290064AAE6 /* FoldersScreen.swift */,
-				CD5DC9D22993D29700B0FB6E /* FolderView.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		CD90493329BB536E0051CCA2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CD90492F29BB3B640051CCA2 /* FolderModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CD90493429BB537D0051CCA2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CD90492D29B9D5A90051CCA2 /* FolderViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CDB354392996D42F008CB2BE /* Recipes Folders */ = {
+			isa = PBXGroup;
+			children = (
+				CD90493229BB53120051CCA2 /* Screen */,
+				CD90493129BB53000051CCA2 /* Views */,
+				CD90493329BB536E0051CCA2 /* Model */,
+				CD90493429BB537D0051CCA2 /* ViewModel */,
 			);
 			path = "Recipes Folders";
 			sourceTree = "<group>";
@@ -171,14 +215,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD8642F529AA7BD200F869E3 /* ScalingView.swift in Sources */,
+				CD90493029BB3B640051CCA2 /* FolderModel.swift in Sources */,
 				CDB3543C2996D4F2008CB2BE /* RecipeView.swift in Sources */,
 				CD8642F1299955EF00F869E3 /* UIApplication.swift in Sources */,
+				CD90492E29B9D5A90051CCA2 /* FolderViewModel.swift in Sources */,
 				CD87B571299171290064AAE6 /* FoldersScreen.swift in Sources */,
 				CD87B57D2991728C0064AAE6 /* Colors.swift in Sources */,
 				CD5DC9D32993D29700B0FB6E /* FolderView.swift in Sources */,
 				CD87B56F299171290064AAE6 /* WhiskApp.swift in Sources */,
 				CD8642F3299B9A8E00F869E3 /* RecipeDetailScreen.swift in Sources */,
 				CD5DC9D529941E0D00B0FB6E /* RecipesScreen.swift in Sources */,
+				CD90492C29B650100051CCA2 /* ShoppingListScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
