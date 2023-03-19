@@ -20,7 +20,11 @@
 		CD90492C29B650100051CCA2 /* ShoppingListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD90492B29B650100051CCA2 /* ShoppingListScreen.swift */; };
 		CD90492E29B9D5A90051CCA2 /* FolderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD90492D29B9D5A90051CCA2 /* FolderViewModel.swift */; };
 		CD90493029BB3B640051CCA2 /* FolderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD90492F29BB3B640051CCA2 /* FolderModel.swift */; };
+		CD90493929BF47120051CCA2 /* ListItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD90493829BF47120051CCA2 /* ListItemsView.swift */; };
+		CD90493C29BF48490051CCA2 /* ShoppingListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD90493B29BF48490051CCA2 /* ShoppingListModel.swift */; };
 		CDB3543C2996D4F2008CB2BE /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3543B2996D4F2008CB2BE /* RecipeView.swift */; };
+		CDC076B829C63F8600A72D10 /* DeleteListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC076B729C63F8600A72D10 /* DeleteListsView.swift */; };
+		CDC076BA29C6FDF700A72D10 /* ShoppingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC076B929C6FDF700A72D10 /* ShoppingListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,10 +39,14 @@
 		CD87B5722991712B0064AAE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD87B5752991712B0064AAE6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CD87B57C2991728C0064AAE6 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		CD90492B29B650100051CCA2 /* ShoppingListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShoppingListScreen.swift; path = "Recipes Folders/ShoppingListScreen.swift"; sourceTree = "<group>"; };
+		CD90492B29B650100051CCA2 /* ShoppingListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListScreen.swift; sourceTree = "<group>"; };
 		CD90492D29B9D5A90051CCA2 /* FolderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderViewModel.swift; sourceTree = "<group>"; };
 		CD90492F29BB3B640051CCA2 /* FolderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderModel.swift; sourceTree = "<group>"; };
+		CD90493829BF47120051CCA2 /* ListItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemsView.swift; sourceTree = "<group>"; };
+		CD90493B29BF48490051CCA2 /* ShoppingListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListModel.swift; sourceTree = "<group>"; };
 		CDB3543B2996D4F2008CB2BE /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
+		CDC076B729C63F8600A72D10 /* DeleteListsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteListsView.swift; sourceTree = "<group>"; };
+		CDC076B929C6FDF700A72D10 /* ShoppingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				CD87B56E299171290064AAE6 /* WhiskApp.swift */,
-				CD90492B29B650100051CCA2 /* ShoppingListScreen.swift */,
+				CD90493529BF46770051CCA2 /* Shopping List */,
 				CD8642F2299B9A8E00F869E3 /* RecipeDetailScreen.swift */,
 				CD8642F429AA7BD100F869E3 /* ScalingView.swift */,
 				CDB3543A2996D4DA008CB2BE /* Recipes */,
@@ -123,6 +131,42 @@
 				CD90492D29B9D5A90051CCA2 /* FolderViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CD90493529BF46770051CCA2 /* Shopping List */ = {
+			isa = PBXGroup;
+			children = (
+				CD90493A29BF481F0051CCA2 /* Model */,
+				CD90493729BF46E60051CCA2 /* Views */,
+				CD90493629BF46920051CCA2 /* Screen */,
+				CDC076B929C6FDF700A72D10 /* ShoppingListViewModel.swift */,
+			);
+			path = "Shopping List";
+			sourceTree = "<group>";
+		};
+		CD90493629BF46920051CCA2 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CD90492B29B650100051CCA2 /* ShoppingListScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		CD90493729BF46E60051CCA2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD90493829BF47120051CCA2 /* ListItemsView.swift */,
+				CDC076B729C63F8600A72D10 /* DeleteListsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CD90493A29BF481F0051CCA2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CD90493B29BF48490051CCA2 /* ShoppingListModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		CDB354392996D42F008CB2BE /* Recipes Folders */ = {
@@ -216,9 +260,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD8642F529AA7BD200F869E3 /* ScalingView.swift in Sources */,
+				CD90493C29BF48490051CCA2 /* ShoppingListModel.swift in Sources */,
+				CDC076B829C63F8600A72D10 /* DeleteListsView.swift in Sources */,
 				CD90493029BB3B640051CCA2 /* FolderModel.swift in Sources */,
 				CDB3543C2996D4F2008CB2BE /* RecipeView.swift in Sources */,
 				CD8642F1299955EF00F869E3 /* UIApplication.swift in Sources */,
+				CDC076BA29C6FDF700A72D10 /* ShoppingListViewModel.swift in Sources */,
+				CD90493929BF47120051CCA2 /* ListItemsView.swift in Sources */,
 				CD90492E29B9D5A90051CCA2 /* FolderViewModel.swift in Sources */,
 				CD87B571299171290064AAE6 /* FoldersScreen.swift in Sources */,
 				CD87B57D2991728C0064AAE6 /* Colors.swift in Sources */,

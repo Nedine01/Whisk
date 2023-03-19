@@ -10,7 +10,7 @@ import SwiftUI
 
 struct FoldersScreen: View {
     
-    @StateObject  var vm = FolderViewModel() //habed :)
+    @StateObject  var vm = FolderViewModel() 
     @State private var presentAlert = false
     @State private var folderName: String = ""
 //    @State private var password: String = ""
