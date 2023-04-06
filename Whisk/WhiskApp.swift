@@ -11,7 +11,8 @@ import SwiftUI
 struct WhiskApp: App {
     var body: some Scene {
         WindowGroup {
-            FoldersScreen()
+//            FoldersScreen()
+            CheckAvailabilityScreen()
         }
     }
 }

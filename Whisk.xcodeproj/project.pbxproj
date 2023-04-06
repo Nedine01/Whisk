@@ -25,6 +25,12 @@
 		CDB3543C2996D4F2008CB2BE /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3543B2996D4F2008CB2BE /* RecipeView.swift */; };
 		CDC076B829C63F8600A72D10 /* DeleteListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC076B729C63F8600A72D10 /* DeleteListsView.swift */; };
 		CDC076BA29C6FDF700A72D10 /* ShoppingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC076B929C6FDF700A72D10 /* ShoppingListViewModel.swift */; };
+		CDC076BE29C781B100A72D10 /* CheckAvailabilityScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC076BD29C781B100A72D10 /* CheckAvailabilityScreen.swift */; };
+		CDC076C229C7849600A72D10 /* StoreCardFrontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC076C129C7849600A72D10 /* StoreCardFrontView.swift */; };
+		CDC076C529C98B3A00A72D10 /* StoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC076C429C98B3A00A72D10 /* StoreModel.swift */; };
+		CDC076C729CDB1BE00A72D10 /* cardFlip.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC076C629CDB1BE00A72D10 /* cardFlip.swift */; };
+		CDC076C929CDB72200A72D10 /* StoreCardBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC076C829CDB72200A72D10 /* StoreCardBackView.swift */; };
+		CDC076CC29CDC0ED00A72D10 /* CheckAvailabilityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC076CB29CDC0ED00A72D10 /* CheckAvailabilityViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +53,12 @@
 		CDB3543B2996D4F2008CB2BE /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 		CDC076B729C63F8600A72D10 /* DeleteListsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteListsView.swift; sourceTree = "<group>"; };
 		CDC076B929C6FDF700A72D10 /* ShoppingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewModel.swift; sourceTree = "<group>"; };
+		CDC076BD29C781B100A72D10 /* CheckAvailabilityScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckAvailabilityScreen.swift; sourceTree = "<group>"; };
+		CDC076C129C7849600A72D10 /* StoreCardFrontView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCardFrontView.swift; sourceTree = "<group>"; };
+		CDC076C429C98B3A00A72D10 /* StoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreModel.swift; sourceTree = "<group>"; };
+		CDC076C629CDB1BE00A72D10 /* cardFlip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardFlip.swift; sourceTree = "<group>"; };
+		CDC076C829CDB72200A72D10 /* StoreCardBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCardBackView.swift; sourceTree = "<group>"; };
+		CDC076CB29CDC0ED00A72D10 /* CheckAvailabilityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckAvailabilityViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +92,10 @@
 			isa = PBXGroup;
 			children = (
 				CD87B56E299171290064AAE6 /* WhiskApp.swift */,
+				CDC076C629CDB1BE00A72D10 /* cardFlip.swift */,
+				CDC076BB29C7814C00A72D10 /* Check Availability */,
 				CD90493529BF46770051CCA2 /* Shopping List */,
-				CD8642F2299B9A8E00F869E3 /* RecipeDetailScreen.swift */,
-				CD8642F429AA7BD100F869E3 /* ScalingView.swift */,
+				CDC076BC29C7817000A72D10 /* Recipe Detail */,
 				CDB3543A2996D4DA008CB2BE /* Recipes */,
 				CD87B57C2991728C0064AAE6 /* Colors.swift */,
 				CD8642F0299955EF00F869E3 /* UIApplication.swift */,
@@ -136,10 +149,10 @@
 		CD90493529BF46770051CCA2 /* Shopping List */ = {
 			isa = PBXGroup;
 			children = (
+				CDC076BF29C781C900A72D10 /* ViewModel */,
 				CD90493A29BF481F0051CCA2 /* Model */,
 				CD90493729BF46E60051CCA2 /* Views */,
 				CD90493629BF46920051CCA2 /* Screen */,
-				CDC076B929C6FDF700A72D10 /* ShoppingListViewModel.swift */,
 			);
 			path = "Shopping List";
 			sourceTree = "<group>";
@@ -187,6 +200,59 @@
 				CDB3543B2996D4F2008CB2BE /* RecipeView.swift */,
 			);
 			path = Recipes;
+			sourceTree = "<group>";
+		};
+		CDC076BB29C7814C00A72D10 /* Check Availability */ = {
+			isa = PBXGroup;
+			children = (
+				CDC076CA29CDC0A000A72D10 /* ViewModel */,
+				CDC076BD29C781B100A72D10 /* CheckAvailabilityScreen.swift */,
+				CDC076C329C98B2700A72D10 /* Model */,
+				CDC076C029C7847000A72D10 /* View */,
+			);
+			path = "Check Availability";
+			sourceTree = "<group>";
+		};
+		CDC076BC29C7817000A72D10 /* Recipe Detail */ = {
+			isa = PBXGroup;
+			children = (
+				CD8642F2299B9A8E00F869E3 /* RecipeDetailScreen.swift */,
+				CD8642F429AA7BD100F869E3 /* ScalingView.swift */,
+			);
+			path = "Recipe Detail";
+			sourceTree = "<group>";
+		};
+		CDC076BF29C781C900A72D10 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CDC076B929C6FDF700A72D10 /* ShoppingListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CDC076C029C7847000A72D10 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CDC076C129C7849600A72D10 /* StoreCardFrontView.swift */,
+				CDC076C829CDB72200A72D10 /* StoreCardBackView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CDC076C329C98B2700A72D10 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CDC076C429C98B3A00A72D10 /* StoreModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CDC076CA29CDC0A000A72D10 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CDC076CB29CDC0ED00A72D10 /* CheckAvailabilityViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,16 +330,22 @@
 				CDC076B829C63F8600A72D10 /* DeleteListsView.swift in Sources */,
 				CD90493029BB3B640051CCA2 /* FolderModel.swift in Sources */,
 				CDB3543C2996D4F2008CB2BE /* RecipeView.swift in Sources */,
+				CDC076C929CDB72200A72D10 /* StoreCardBackView.swift in Sources */,
 				CD8642F1299955EF00F869E3 /* UIApplication.swift in Sources */,
 				CDC076BA29C6FDF700A72D10 /* ShoppingListViewModel.swift in Sources */,
 				CD90493929BF47120051CCA2 /* ListItemsView.swift in Sources */,
+				CDC076BE29C781B100A72D10 /* CheckAvailabilityScreen.swift in Sources */,
 				CD90492E29B9D5A90051CCA2 /* FolderViewModel.swift in Sources */,
 				CD87B571299171290064AAE6 /* FoldersScreen.swift in Sources */,
 				CD87B57D2991728C0064AAE6 /* Colors.swift in Sources */,
 				CD5DC9D32993D29700B0FB6E /* FolderView.swift in Sources */,
+				CDC076C529C98B3A00A72D10 /* StoreModel.swift in Sources */,
 				CD87B56F299171290064AAE6 /* WhiskApp.swift in Sources */,
 				CD8642F3299B9A8E00F869E3 /* RecipeDetailScreen.swift in Sources */,
 				CD5DC9D529941E0D00B0FB6E /* RecipesScreen.swift in Sources */,
+				CDC076CC29CDC0ED00A72D10 /* CheckAvailabilityViewModel.swift in Sources */,
+				CDC076C229C7849600A72D10 /* StoreCardFrontView.swift in Sources */,
+				CDC076C729CDB1BE00A72D10 /* cardFlip.swift in Sources */,
 				CD90492C29B650100051CCA2 /* ShoppingListScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

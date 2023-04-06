@@ -302,39 +302,39 @@ func test100(vm:ShoppingListViewModel,cat:ShoppingListCategory,g:GeometryProxy,r
                 cat.items.remove(atOffsets: indexSet)
             }
             
-            if vm.addPressed && row+1 == vm.selectedCategory.orderID{
-                
-                HStack {
-                    Circle()
-                        .fill(.white)
-                        .frame(width: 23, height: 23)
-                        .overlay(
-                            Circle()
-                                .stroke(Color("yellow"), lineWidth: 2)
-                        )
-                    TextField("New Item", text: vm.)
-                        .padding(.leading, 5)
-                    
-                    if !vm.newItem.isEmpty {
-                        Spacer()
-                        
-                        Button {
-                            cat.items.append(Item(title: vm.newItem, isCompleted: false))
-                            
-                            vm.newItem = ""
-                            
-                            vm.addPressed = false
-                        } label: {
-                            Text("Done")
-                                .foregroundColor(Color("navy"))
-                        }
-                        .buttonStyle(PlainButtonStyle())
-                        .padding(.trailing, 25)
-                        
-                    }
-                }
-                .listRowSeparator(.hidden)
-            }
+//            if vm.addPressed && row+1 == vm.selectedCategory.orderID{
+//                
+//                HStack {
+//                    Circle()
+//                        .fill(.white)
+//                        .frame(width: 23, height: 23)
+//                        .overlay(
+//                            Circle()
+//                                .stroke(Color("yellow"), lineWidth: 2)
+//                        )
+//                    TextField("New Item", text: vm.)
+//                        .padding(.leading, 5)
+//                    
+//                    if !vm.newItem.isEmpty {
+//                        Spacer()
+//                        
+//                        Button {
+//                            cat.items.append(Item(title: vm.newItem, isCompleted: false))
+//                            
+//                            vm.newItem = ""
+//                            
+//                            vm.addPressed = false
+//                        } label: {
+//                            Text("Done")
+//                                .foregroundColor(Color("navy"))
+//                        }
+//                        .buttonStyle(PlainButtonStyle())
+//                        .padding(.trailing, 25)
+//                        
+//                    }
+//                }
+//                .listRowSeparator(.hidden)
+//            }
             
             
         }
