@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD29044429F0C1BC0053356A /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD29044329F0C1BC0053356A /* SideMenuView.swift */; };
 		CD5DC9D32993D29700B0FB6E /* FolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DC9D22993D29700B0FB6E /* FolderView.swift */; };
 		CD5DC9D529941E0D00B0FB6E /* RecipesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DC9D429941E0D00B0FB6E /* RecipesScreen.swift */; };
 		CD8642F1299955EF00F869E3 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8642F0299955EF00F869E3 /* UIApplication.swift */; };
@@ -31,9 +32,16 @@
 		CDC076C729CDB1BE00A72D10 /* cardFlip.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC076C629CDB1BE00A72D10 /* cardFlip.swift */; };
 		CDC076C929CDB72200A72D10 /* StoreCardBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC076C829CDB72200A72D10 /* StoreCardBackView.swift */; };
 		CDC076CC29CDC0ED00A72D10 /* CheckAvailabilityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC076CB29CDC0ED00A72D10 /* CheckAvailabilityViewModel.swift */; };
+		CDF3428729DF7FB3004D9ED7 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF3428629DF7FB3004D9ED7 /* HomeScreen.swift */; };
+		CDF3428A29DF8BD2004D9ED7 /* ShoppingListCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF3428929DF8BD2004D9ED7 /* ShoppingListCardView.swift */; };
+		CDF3428C29DF8C2A004D9ED7 /* ShoppingItemCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF3428B29DF8C2A004D9ED7 /* ShoppingItemCardView.swift */; };
+		CDF3428E29E30910004D9ED7 /* Editor'sChoiceCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF3428D29E30910004D9ED7 /* Editor'sChoiceCardView.swift */; };
+		CDF3429029EC84B8004D9ED7 /* ChooseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF3428F29EC84B7004D9ED7 /* ChooseListView.swift */; };
+		CDF3429329EC86E1004D9ED7 /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF3429229EC86E1004D9ED7 /* HomeScreenViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD29044329F0C1BC0053356A /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		CD5DC9D22993D29700B0FB6E /* FolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderView.swift; sourceTree = "<group>"; };
 		CD5DC9D429941E0D00B0FB6E /* RecipesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesScreen.swift; sourceTree = "<group>"; };
 		CD8642F0299955EF00F869E3 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
@@ -59,6 +67,12 @@
 		CDC076C629CDB1BE00A72D10 /* cardFlip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardFlip.swift; sourceTree = "<group>"; };
 		CDC076C829CDB72200A72D10 /* StoreCardBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCardBackView.swift; sourceTree = "<group>"; };
 		CDC076CB29CDC0ED00A72D10 /* CheckAvailabilityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckAvailabilityViewModel.swift; sourceTree = "<group>"; };
+		CDF3428629DF7FB3004D9ED7 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		CDF3428929DF8BD2004D9ED7 /* ShoppingListCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListCardView.swift; sourceTree = "<group>"; };
+		CDF3428B29DF8C2A004D9ED7 /* ShoppingItemCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItemCardView.swift; sourceTree = "<group>"; };
+		CDF3428D29E30910004D9ED7 /* Editor'sChoiceCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Editor'sChoiceCardView.swift"; sourceTree = "<group>"; };
+		CDF3428F29EC84B7004D9ED7 /* ChooseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseListView.swift; sourceTree = "<group>"; };
+		CDF3429229EC86E1004D9ED7 /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +107,7 @@
 			children = (
 				CD87B56E299171290064AAE6 /* WhiskApp.swift */,
 				CDC076C629CDB1BE00A72D10 /* cardFlip.swift */,
+				CDF3428529DF7F86004D9ED7 /* Home */,
 				CDC076BB29C7814C00A72D10 /* Check Availability */,
 				CD90493529BF46770051CCA2 /* Shopping List */,
 				CDC076BC29C7817000A72D10 /* Recipe Detail */,
@@ -255,6 +270,36 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		CDF3428529DF7F86004D9ED7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CDF3429129EC8685004D9ED7 /* ViewModel */,
+				CDF3428829DF8BAE004D9ED7 /* Views */,
+				CDF3428629DF7FB3004D9ED7 /* HomeScreen.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CDF3428829DF8BAE004D9ED7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CDF3428929DF8BD2004D9ED7 /* ShoppingListCardView.swift */,
+				CDF3428B29DF8C2A004D9ED7 /* ShoppingItemCardView.swift */,
+				CDF3428F29EC84B7004D9ED7 /* ChooseListView.swift */,
+				CDF3428D29E30910004D9ED7 /* Editor'sChoiceCardView.swift */,
+				CD29044329F0C1BC0053356A /* SideMenuView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CDF3429129EC8685004D9ED7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CDF3429229EC86E1004D9ED7 /* HomeScreenViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -330,12 +375,17 @@
 				CDC076B829C63F8600A72D10 /* DeleteListsView.swift in Sources */,
 				CD90493029BB3B640051CCA2 /* FolderModel.swift in Sources */,
 				CDB3543C2996D4F2008CB2BE /* RecipeView.swift in Sources */,
+				CDF3428C29DF8C2A004D9ED7 /* ShoppingItemCardView.swift in Sources */,
+				CDF3429029EC84B8004D9ED7 /* ChooseListView.swift in Sources */,
 				CDC076C929CDB72200A72D10 /* StoreCardBackView.swift in Sources */,
+				CDF3428A29DF8BD2004D9ED7 /* ShoppingListCardView.swift in Sources */,
+				CDF3429329EC86E1004D9ED7 /* HomeScreenViewModel.swift in Sources */,
 				CD8642F1299955EF00F869E3 /* UIApplication.swift in Sources */,
 				CDC076BA29C6FDF700A72D10 /* ShoppingListViewModel.swift in Sources */,
 				CD90493929BF47120051CCA2 /* ListItemsView.swift in Sources */,
 				CDC076BE29C781B100A72D10 /* CheckAvailabilityScreen.swift in Sources */,
 				CD90492E29B9D5A90051CCA2 /* FolderViewModel.swift in Sources */,
+				CD29044429F0C1BC0053356A /* SideMenuView.swift in Sources */,
 				CD87B571299171290064AAE6 /* FoldersScreen.swift in Sources */,
 				CD87B57D2991728C0064AAE6 /* Colors.swift in Sources */,
 				CD5DC9D32993D29700B0FB6E /* FolderView.swift in Sources */,
@@ -343,8 +393,10 @@
 				CD87B56F299171290064AAE6 /* WhiskApp.swift in Sources */,
 				CD8642F3299B9A8E00F869E3 /* RecipeDetailScreen.swift in Sources */,
 				CD5DC9D529941E0D00B0FB6E /* RecipesScreen.swift in Sources */,
+				CDF3428E29E30910004D9ED7 /* Editor'sChoiceCardView.swift in Sources */,
 				CDC076CC29CDC0ED00A72D10 /* CheckAvailabilityViewModel.swift in Sources */,
 				CDC076C229C7849600A72D10 /* StoreCardFrontView.swift in Sources */,
+				CDF3428729DF7FB3004D9ED7 /* HomeScreen.swift in Sources */,
 				CDC076C729CDB1BE00A72D10 /* cardFlip.swift in Sources */,
 				CD90492C29B650100051CCA2 /* ShoppingListScreen.swift in Sources */,
 			);

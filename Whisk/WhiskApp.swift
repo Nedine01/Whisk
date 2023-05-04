@@ -12,7 +12,8 @@ struct WhiskApp: App {
     var body: some Scene {
         WindowGroup {
 //            FoldersScreen()
-            CheckAvailabilityScreen()
+//            CheckAvailabilityScreen()
+            HomeScreen()
         }
     }
 }

@@ -24,7 +24,7 @@ class ShoppingListViewModel:ObservableObject {
     //@State var newItem: String = ""
    // @Published var newItem = ""
 
-    @Published  var presentAlert = false
+    @Published var presentAlert = false
     @Published var show = false
     
     
